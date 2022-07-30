@@ -1,0 +1,11 @@
+<h2>Carts</h2>
+<div *ngFor="let cart of cartList.carts">
+<h5 (click)=clicked()>Cart Id: {{cart.id}}<br>
+Total: {{cart.total}}<br>
+Quantity: {{cart.totalQuantity}}<br>
+Total Products: {{cart.totalProducts}}</h5>
+<!-- <button (click)=clicked()>View Details</button> -->
+<div *ngIf=viewDetails>
+<app-cart-item-details [products]="cart.products"></app-cart-item-details>
+</div>
+</div>
